@@ -21,7 +21,7 @@ const TaskEntry = () => {
             const fetchTask = async () => {
                 setLoading(true);
                 try {
-                    const res = await axios.get(`http://localhost:5000/api/tasks/${taskId}`);
+                    const res = await axios.get(`https://task-management-system.onrender.com/api/tasks/${taskId}`);
                     setTask(res.data);
                     setLoading(false);
                 } catch (error) {
@@ -43,9 +43,9 @@ const TaskEntry = () => {
         setLoading(true);
         try {
             if (isEditing) {
-                await axios.put(`http://localhost:5000/api/tasks/${taskId}`, task);
+                await axios.put(`https://task-management-system.onrender.com/api/tasks/${taskId}`, task);
             } else {
-                await axios.post('http://localhost:5000/api/tasks', task);
+                await axios.post('https://task-management-system.onrender.com/api/tasks', task);
             }
             setLoading(false);
             navigate('/home');
