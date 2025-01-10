@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { io } from 'socket.io-client';
 import '../styles/HomePage.css';
+import Navbar from '../components/Navbar';
 
 const HomePage = () => {
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
-    const socket = io('http://localhost:5000');
+    const socket = io('https://task-management-system.onrender.com');
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -56,6 +57,8 @@ const HomePage = () => {
     }
 
     return (
+         <div>
+            <Navbar />
         <div className="container">
             <header className="header">
                 <h1 className="page-title">Task List</h1>
@@ -91,6 +94,7 @@ const HomePage = () => {
                 ))}
             </div>
         </div>
+             </div>
     );
 };
 
