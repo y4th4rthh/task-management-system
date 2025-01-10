@@ -131,6 +131,10 @@ body{
     color: #08d356;
 }
 
+.delete-link {
+    color: red;
+}
+
 .loading {
     text-align: center;
     font-size: 18px;
