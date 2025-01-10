@@ -20,7 +20,7 @@ const Register = () => {
                 password,
             });
             setLoading(false);
-            navigate('/login'); // Redirect to login page
+            navigate('/'); // Redirect to login page
         } catch (error) {
             setError('Error registering user');
             setLoading(false);
