@@ -52,11 +52,11 @@ const TaskDetails = () => {
         <div className="task-details-container">
             <h2 className="task-details-title">{task.title}</h2>
             <div className="task-details">
-                <p className="task-value">{task.description}</p>
-                <p className="task-value">Status: {task.status}</p>
-                <p className="task-value">Assigned To: {task.assignedTo}</p>
-                <p className="task-value">Created At: {new Date(task.createdAt).toLocaleString()}</p>
-                <p className="task-value">Updated At: {new Date(task.updatedAt).toLocaleString()}</p>
+                <p className="task-value"><b>Description:</b> {task.description}</p>
+                <p className="task-value"><b>Status:</b> {task.status}</p>
+                <p className="task-value"><b>Assigned To:</b> {task.assignedTo}</p>
+                <p className="task-value"><b>Created At:</b> {new Date(task.createdAt).toLocaleString()}</p>
+                <p className="task-value"><b>Updated At:</b> {new Date(task.updatedAt).toLocaleString()}</p>
             
                 <div className="button-group">
                     <button
