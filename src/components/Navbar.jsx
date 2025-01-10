@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
 
         <nav>
-            <h1>Task Management System</h1>
+            <h1>T.M.S.</h1>
             <ul>
                 
                 
