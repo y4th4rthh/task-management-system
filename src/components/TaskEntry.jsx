@@ -132,7 +132,7 @@ const TaskEntry = () => {
                     </button>
                     <button
                         className="cancel-button"
-                        onClick={() => navigate('/home')}
+                        onClick={() => window.location.href = '/home'}
                     >
                         Cancel
                     </button>
