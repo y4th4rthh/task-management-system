@@ -96,13 +96,13 @@ const HomePage = () => {
 
                         <div className="task-actions">
                             <Link to={`/tasks/${task.taskId}`} className="action-link view-link">
-                                <span>📌</span> View Details
+                                View Details
                             </Link>
                             <Link to={`/edit-task/${task.taskId}`} className="action-link edit-link">
-                                <span>✏️</span> Edit
+                                Edit
                             </Link>
                             <Link to='/home'  onClick={() => handleDeleteTask(task.taskId)} className="action-link delete-link">
-                                    <span>🗑️</span> Delete
+                                     Delete
                             </Link>
                         </div>
                     </div>
