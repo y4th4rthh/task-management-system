@@ -1,6 +1,15 @@
 /* register Container */
+.register-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    width: 100%;
+}
 .register-container {
     max-width: 400px;
+    width: 100%;
     margin: 60px auto;
     padding: 30px;
     background-color: white;
