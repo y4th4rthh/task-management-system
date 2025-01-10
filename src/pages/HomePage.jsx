@@ -99,7 +99,7 @@ const HomePage = () => {
                             <Link to={`/edit-task/${task.taskId}`} className="action-link edit-link">
                                 <span>✏️</span> Edit
                             </Link>
-                            <Link to={`/home`}  onClick={() => handleDeleteTask(task.taskId)} className="action-link delete-link">
+                            <Link to='/home'  onClick={() => handleDeleteTask(task.taskId)} className="action-link delete-link">
                                     <span>🗑️</span> Delete
                             </Link>
                         </div>
