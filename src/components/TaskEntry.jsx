@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../styles/TaskEntry.css';
+import Navbar from './Navbar';
 
 const TaskEntry = () => {
     const [task, setTask] = useState({
@@ -60,6 +61,8 @@ const TaskEntry = () => {
     }
 
     return (
+        <div>
+            <Navbar/>
         <div className="task-entry-container">
             <h2 className="task-entry-title">
                 {isEditing ? 'Tweek Task' : 'Create New Task'}
@@ -135,6 +138,7 @@ const TaskEntry = () => {
                     </button>
                 </div>
             </form>
+        </div>
         </div>
     );
 };
