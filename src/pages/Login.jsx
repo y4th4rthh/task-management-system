@@ -28,6 +28,7 @@ const LoginPage = () => {
     };
 
     return (
+      <div className="login-page">  
         <div className="login-container">
             <h2 className="login-title">Login</h2>
             
@@ -70,6 +71,7 @@ const LoginPage = () => {
             <p className="register-link">
                 Don't have an account? <a href="/register">Register</a>
             </p>
+        </div>
         </div>
     );
 };
