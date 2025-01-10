@@ -15,12 +15,12 @@ const Register = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('https://task-management-system.onrender.com/api/auth/register', {
+            await axios.post('https://task-management-system-ex1w.onrender.com/api/auth/register', {
                 email,
                 password,
             });
             setLoading(false);
-            navigate('/'); // Redirect to login page
+            navigate('/'); 
         } catch (error) {
             setError('Error registering user');
             setLoading(false);
