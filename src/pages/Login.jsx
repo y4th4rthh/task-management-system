@@ -16,7 +16,7 @@ const LoginPage = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await axios.post('https://task-management-system.onrender.com/api/auth/login', {
+            const res = await axios.post('https://task-management-system-ex1w.onrender.com/api/auth/login', {
                 email,
                 password,
             });
