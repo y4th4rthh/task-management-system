@@ -12,7 +12,7 @@ const HomePage = () => {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/tasks');
+                const res = await axios.get('https://task-management-system.onrender.com/api/tasks');
                 setTasks(res.data);
                 setLoading(false);
             } catch (error) {
