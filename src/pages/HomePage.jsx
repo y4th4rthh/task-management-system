@@ -52,6 +52,16 @@ const HomePage = () => {
         }
     };
 
+     const handleDeleteTask = async (taskId) => {
+        try {
+            await axios.delete(`https://task-management-system-ex1w.onrender.com/api/tasks/${taskId}`);
+            alert('Task deleted successfully');
+            navigate('/home');
+        } catch (error) {
+            console.error('Error deleting task:', error);
+        }
+    };
+
     if (loading) {
         return <div className="loading">Loading tasks...</div>;
     }
@@ -88,6 +98,9 @@ const HomePage = () => {
                             </Link>
                             <Link to={`/edit-task/${task.taskId}`} className="action-link edit-link">
                                 <span>✏️</span> Edit
+                            </Link>
+                            <Link to={`/home`}  onClick={() => handleDeleteTask(task.taskId)} className="action-link delete-link">
+                                    <span>🗑️</span> Delete
                             </Link>
                         </div>
                     </div>
