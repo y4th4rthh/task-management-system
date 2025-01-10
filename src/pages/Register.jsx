@@ -27,6 +27,7 @@ const RegisterPage = () => {
     };
 
     return (
+     <div className="register-page">
         <div className="register-container">
             <h2 className="register-title">Register</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -61,6 +62,7 @@ const RegisterPage = () => {
                 Already have an account? <a href="/">Login</a>
             </p>
         </div>
+      </div>
     );
 };
 
