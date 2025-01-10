@@ -8,12 +8,12 @@ import Navbar from '../components/Navbar';
 const HomePage = () => {
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
-    const socket = io('https://task-management-system.onrender.com');
+    const socket = io('https://task-management-system-ex1w.onrender.com');
 
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const res = await axios.get('https://task-management-system.onrender.com/api/tasks');
+                const res = await axios.get('https://task-management-system-ex1w.onrender.com/api/tasks');
                 setTasks(res.data);
                 setLoading(false);
             } catch (error) {
