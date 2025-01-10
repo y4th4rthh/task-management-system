@@ -5,14 +5,8 @@ const createTask = async (req, res) => {
     const { title, description, status, assignedTo } = req.body;
 
     try {
-        // let counter = await Counter.findOneAndUpdate(
-        //     { model: 'task' },  // Use 'task' model name to track taskId
-        //     { $inc: { sequenceValue: 1 } },
-        //     { new: true, upsert: true } // Create the counter if it doesn't exist
-        // );
-
-        const taskId = 1;
-
+        const lastTask = await Task.findOne().sort({ taskId: -1 });
+        const taskId = lastTask ? lastTask.taskId + 1 : 1;
         
         const newTask = new Task({taskId, title, description, status, assignedTo });
         await newTask.save();
