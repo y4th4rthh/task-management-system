@@ -1,0 +1,160 @@
+/* Main Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap:20px;
+}
+
+.page-title {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+}
+
+/* Create Task Button */
+.create-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+    background-color: #1d4ed8;
+}
+
+.create-button-icon {
+    font-size: 20px;
+}
+
+/* Task Grid */
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Task Card */
+.task-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-progress {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-pending {
+    background-color: #fef9c3;
+    color: #854d0e;
+}
+
+/* Task Details */
+.task-assigned {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.assigned-name {
+    color: #333;
+    font-weight: 500;
+}
+
+.task-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.action-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.action-link:hover {
+    opacity: 0.8;
+}
+
+.view-link {
+    color: #2563eb;
+}
+
+.edit-link {
+    color: #08d356;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .task-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

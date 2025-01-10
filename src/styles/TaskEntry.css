@@ -1,0 +1,116 @@
+/* Task Entry Container */
+.task-entry-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-entry-title {
+    font-size: 32px;
+    color: #333;
+    margin: 0 0 24px 0;
+}
+
+/* Form Styles */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-select {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Loading State */
+.loading-message {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+
+.cancel-button {
+    background-color: #eb2543;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 640px) {
+    .task-entry-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,83 @@
+/* Task Entry Container */
+.task-details-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-details-title {
+    font-size: 32px;
+    color: #333;
+    margin: 0 0 24px 0;
+}
+
+/* Form Styles */
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-value {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+/* Loading State */
+.loading-message {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Submit Button */
+.delete-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+
+.cancel-button {
+    background-color: #eb2543;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 640px) {
+    .task-entry-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
