@@ -22,14 +22,14 @@ const Navbar = () => {
                 {isAuthenticated ? (
                     <>
                     <li><Link to="/home">Home</Link></li>
-                    <li><button className="log-button" onClick={handleLogout}>Logout</button></li>
+                    <li><button className="logout-button" onClick={handleLogout}>Logout</button></li>
                     </>
                 ) : (
                     <>
                         {location.pathname === "/" ? (
-                            <li><Link to="/register" className="log-button">Register</Link></li>
+                            <li><Link to="/register" className="login-button">Register</Link></li>
                         ) : (
-                            <li><Link to="/" className="log-button">Login</Link></li>
+                            <li><Link to="/" className="login-button">Login</Link></li>
                         )}
                     </>
                 )}
