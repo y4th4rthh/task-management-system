@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 
 const LoginPage = () => {
@@ -30,6 +31,8 @@ const LoginPage = () => {
     };
 
     return (
+      <div>
+        <Navbar/>  
       <div className="login-page">  
         <div className="login-container">
             <h2 className="login-title">Login</h2>
@@ -73,6 +76,7 @@ const LoginPage = () => {
             <p className="register-link">
                 Don't have an account? <Link to="/register">Register</Link>
             </p>
+        </div>
         </div>
         </div>
     );
