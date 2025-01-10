@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -28,6 +29,8 @@ const Register = () => {
     };
 
     return (
+      <div>
+        <Navbar/>  
      <div className="register-page">
         <div className="register-container">
             <h2 className="register-title">Register</h2>
@@ -63,6 +66,7 @@ const Register = () => {
                 Already have an account? <Link to="/">Login</Link>
             </p>
         </div>
+      </div>
       </div>
     );
 };
