@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
 import { Link } from 'react-router-dom';
 
-const RegisterPage = () => {
+const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -67,4 +67,4 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
+export default Register;
