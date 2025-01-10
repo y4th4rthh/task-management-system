@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../styles/TaskEntry.css';
 import Navbar from './Navbar';
 
@@ -12,7 +12,6 @@ const TaskEntry = () => {
         assignedTo: '',
     });
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate();
     const [isEditing, setIsEditing] = useState(false);
     const { taskId } = useParams();
 
@@ -25,7 +24,7 @@ const TaskEntry = () => {
                     const res = await axios.get(`https://task-management-system-ex1w.onrender.com/api/tasks/${taskId}`);
                     setTask(res.data);
                     setLoading(false);
-                    navigate('/home');
+                    window.location.href = "/home";
                 } catch (error) {
                     console.error(error);
                     setLoading(false);
@@ -50,7 +49,7 @@ const TaskEntry = () => {
                 await axios.post('https://task-management-system-ex1w.onrender.com/api/tasks', task);
             }
             setLoading(false);
-            navigate('/home');
+            window.location.href = "/home";
         } catch (error) {
             console.error(error);
             setLoading(false);
