@@ -1,21 +1,41 @@
-
 import React from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const isAuthenticated = !!localStorage.getItem('token');
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate('/');
+    };
     return (
 
-<nav>
-<h1>Task Management System</h1>
-<ul>
-  <li><Link to="/home">Home</Link></li>
-  <li><button class="log-button" onClick={ () => navigate('/')}>Logout</button></li>
-</ul>
-</nav>
+        <nav>
+            <h1>Task Management System</h1>
+            <ul>
+                
+                
+                {isAuthenticated ? (
+                    <>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><button className="log-button" onClick={handleLogout}>Logout</button></li>
+                    </>
+                ) : (
+                    <>
+                        {location.pathname === "/" ? (
+                            <li><Link to="/register" className="log-button">Register</Link></li>
+                        ) : (
+                            <li><Link to="/" className="log-button">Login</Link></li>
+                        )}
+                    </>
+                )}
+            </ul>
+        </nav>
 
-    );      
+    );
 }
 export default Navbar;
