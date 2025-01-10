@@ -15,7 +15,7 @@ const TaskDetails = () => {
         const fetchTask = async () => {
             try {
 
-                const res = await axios.get(`http://localhost:5000/api/tasks/${taskId}`);
+                const res = await axios.get(`https://task-management-system.onrender.com/api/tasks/${taskId}`);
                 setTask(res.data);
                 setLoading(false);
             } catch (error) {
@@ -29,7 +29,7 @@ const TaskDetails = () => {
 
     const handleDeleteTask = async (taskId) => {
         try {
-            await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+            await axios.delete(`https://task-management-system.onrender.com/api/tasks/${taskId}`);
             alert('Task deleted successfully');
             navigate('/home');
         } catch (error) {
