@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import '../styles/TaskDetails.css';
+import Navbar from './Navbar';
 
 const TaskDetails = () => {
     const [task, setTask] = useState(null);
@@ -46,6 +47,8 @@ const TaskDetails = () => {
     }
 
     return (
+        <div>
+            <Navbar/>
         <div className="task-details-container">
             <h2 className="task-details-title">{task.title}</h2>
             <div className="task-details">
@@ -70,6 +73,7 @@ const TaskDetails = () => {
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
