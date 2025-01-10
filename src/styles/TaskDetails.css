@@ -16,7 +16,7 @@
 .task-details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
 }
 
 .task-value {
