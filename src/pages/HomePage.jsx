@@ -84,7 +84,7 @@ const HomePage = () => {
 
                         <div className="task-actions">
                             <Link to={`/tasks/${task.taskId}`} className="action-link view-link">
-                                <span>👁️</span> View Details
+                                <span>📌</span> View Details
                             </Link>
                             <Link to={`/edit-task/${task.taskId}`} className="action-link edit-link">
                                 <span>✏️</span> Edit
