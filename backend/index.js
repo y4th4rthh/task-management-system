@@ -16,7 +16,7 @@ const io = socketIo(server);
 connectDB();
 
 app.use(cors());
-app.use(express.json()); // Parse incoming JSON
+app.use(express.json()); 
 
 app.use('/api/auth', authRoutes);
 app.use('/api', taskRoutes);
@@ -25,9 +25,8 @@ app.use('/api', taskRoutes);
 io.on('connection', (socket) => {
     console.log('A user connected');
     
-    // Emit task update to the connected client
     socket.on('task-update', (taskData) => {
-      io.emit('task-updated', taskData);  // Broadcast task update to all clients
+      io.emit('task-updated', taskData);  
     });
     
     socket.on('disconnect', () => {
