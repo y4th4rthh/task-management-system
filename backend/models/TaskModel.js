@@ -9,7 +9,7 @@ const taskSchema = new mongoose.Schema({
         enum: ['Pending', 'In Progress', 'Completed'],
         default: 'Pending',
     },
-    assignedTo: { type: String, required: true },  // Email of the user assigned
+    assignedTo: { type: String, required: true },  
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
 });
