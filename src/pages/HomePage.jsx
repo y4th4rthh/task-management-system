@@ -4,12 +4,14 @@ import axios from 'axios';
 import { io } from 'socket.io-client';
 import '../styles/HomePage.css';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
     const socket = io('https://task-management-system-ex1w.onrender.com');
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
         const fetchTasks = async () => {
             try {
