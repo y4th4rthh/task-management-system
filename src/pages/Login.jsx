@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
+import { Link } from 'react-router-dom';
+
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -69,7 +71,7 @@ const LoginPage = () => {
             </form>
             
             <p className="register-link">
-                Don't have an account? <a href="/register">Register</a>
+                Don't have an account? <Link to="/register">Register</Link>
             </p>
         </div>
         </div>
