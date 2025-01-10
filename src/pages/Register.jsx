@@ -14,7 +14,7 @@ const RegisterPage = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('http://localhost:5000/api/auth/register', {
+            await axios.post('https://task-management-system.onrender.com/api/auth/register', {
                 email,
                 password,
             });
