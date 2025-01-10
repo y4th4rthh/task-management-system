@@ -1,4 +1,4 @@
-# Quick Resume
+# Task Management System
 
 ![Project Preview](./preview/tms.png)
 
