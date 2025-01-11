@@ -24,7 +24,6 @@ const TaskEntry = () => {
                     const res = await axios.get(`https://task-management-system-ex1w.onrender.com/api/tasks/${taskId}`);
                     setTask(res.data);
                     setLoading(false);
-                    window.location.href = "/home";
                 } catch (error) {
                     console.error(error);
                     setLoading(false);
