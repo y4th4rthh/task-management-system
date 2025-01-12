@@ -1,13 +1,11 @@
 import React from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
-import { useNavigate,useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 const Navbar = () => {
-    const navigate = useNavigate();
     const location = useLocation();
-    const isAuthenticated = !!localStorage.getItem('token');
      const { taskId } = useParams();
 
     const handleLogout = () => {
