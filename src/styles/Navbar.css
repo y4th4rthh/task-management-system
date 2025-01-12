@@ -51,11 +51,11 @@ nav ul li a:hover {
     transition: background 0.3s;
 }
 
-.login-button {
+.login-nav-button {
     background-color:#007bff;
     border: none;
     color: #fff;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;

@@ -27,9 +27,9 @@ const Navbar = () => {
                 ) : (
                     <>
                         {location.pathname === "/" ? (
-                            <li><Link to="/register" className="login-button">Register</Link></li>
+                            <li><Link to="/register" className="login-nav-button">Register</Link></li>
                         ) : (
-                            <li><Link to="/" className="login-button">Login</Link></li>
+                            <li><Link to="/" className="login-nav-button">Login</Link></li>
                         )}
                     </>
                 )}
