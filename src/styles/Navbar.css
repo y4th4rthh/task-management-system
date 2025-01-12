@@ -55,7 +55,7 @@ nav ul li a:hover {
     background-color:#007bff;
     border: none;
     color: #fff;
-    padding: 0rem 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;

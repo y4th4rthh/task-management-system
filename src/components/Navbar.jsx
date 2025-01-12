@@ -2,15 +2,17 @@ import React from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import { useNavigate,useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const isAuthenticated = !!localStorage.getItem('token');
+     const { taskId } = useParams();
 
     const handleLogout = () => {
         localStorage.removeItem('token');
-        navigate('/');
+        // navigate('/');
     };
     return (
 
@@ -19,10 +21,10 @@ const Navbar = () => {
             <ul>
                 
                 
-                {isAuthenticated ? (
+                {location.pathname === "/home" || location.pathname === "/edit-task" || location.pathname === `/tasks/${taskId}` || location.pathname === `/edit-task/${taskId}` ? (
                     <>
                     <li><Link to="/home">Home</Link></li>
-                    <li><button className="logout-button" onClick={handleLogout}>Logout</button></li>
+                    <li><Link to="/" className="logout-button" onClick={handleLogout}>Logout</Link></li>
                     </>
                 ) : (
                     <>
